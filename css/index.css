@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+aheader{
+  /* Rectangle 15 */
+
+  position: absolute;
+  width: 1920px;
+  height: 290px;
+
+  background: #FFA800;
+  border: 10px solid #000000;
+  align-content: center;
+  align-items: center;  
+}        
