@@ -1,14 +1,19 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap');
+
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 header {
 	/* Rectangle 15 */
 	
 }
 
 body {
-	/*   height: 100vh;
-  background-image: url('../img/v642-nap-37-fastfood.jpg');
-  background-size: cover; */
 	height: 100vh;
 	background: url('../img/v642-nap-37-fastfood.jpg') no-repeat center;
 	background-size: cover;
@@ -25,27 +30,28 @@ body {
 	line-height: 20px;
 	margin-top:20px;
 
-	font-weight: bold;
+	/* font-weight: bold; */
 	font-size: 150%;
-	font-family: 'Single Day', cursive;
+	font-family: 'ONE-Mobile-POP';
+  
 }
 
 #login{
+	
 	margin-right: 25px;
 }
 
-#tableMain{
+#tableTop{
+
 	margin-top: 70px;
 	width: auto;
 	height: auto;
 }
 
-/* Rectangle 5 */
 #select1{
 
 	width: 431px;
 	height: 220px;
-	
 	background: #FFA800;
 	border: 7px solid #000000;
 }
@@ -54,7 +60,6 @@ body {
 
 	width: 431px;
 	height: 220px;
-
 	background: #593600;
 	border: 7px solid #000000;
 
@@ -64,7 +69,6 @@ body {
 
 	width: 431px;
 	height: 220px;
-
 	background: #FFA800;
 	border: 7px solid #000000;
 
@@ -75,9 +79,17 @@ body {
 
 	width: 1373px;
 	height: 709px;
-
-	/* background: url(햄버거 일러스트.jpg); */
+	background: url(../img/mainimg1.jpg);
 	border: 9px solid #000000;
 
+}
+
+td{
+
+	text-align: center;
+	font-size: 30pt;
+	font-family: 'ONE-Mobile-POP';
+	font-style: ;
+	
 }
 
