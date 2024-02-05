@@ -7,89 +7,45 @@
     font-weight: normal;
     font-style: normal;
 }
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
 
 header {
-	/* Rectangle 15 */
-	
+	background-color: #333;
+	padding: 10px;
+	display: flex;
+	align-items: center; /* 상하 중앙 정렬 */
+	justify-content: space-between; /* 좌우 중앙 정렬 */
 }
 
-body {
-	height: 100vh;
-	background: url('../img/v642-nap-37-fastfood.jpg') no-repeat center;
-	background-size: cover;
+h1 {
+	margin: 0;
+	color: white;
 }
 
-#main {
-	float: right;
-	margin-right: 90px;
-	line-height: nomal;
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center; /* 상하 중앙 정렬 */
 }
 
-.regemain {
-	float: right;
-	line-height: 20px;
-	margin-top:20px;
-
-	/* font-weight: bold; */
-	font-size: 150%;
-	font-family: 'ONE-Mobile-POP';
-  
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-#login{
-	
-	margin-right: 25px;
+nav li {
+	margin: 0 15px;
+	display: inline-block;
 }
 
-#tableTop{
-
-	margin-top: 70px;
-	width: auto;
-	height: auto;
+nav a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
 }
-
-#select1{
-
-	width: 431px;
-	height: 220px;
-	background: #FFA800;
-	border: 7px solid #000000;
-}
-
-#select2{
-
-	width: 431px;
-	height: 220px;
-	background: #593600;
-	border: 7px solid #000000;
-
-}
-
-#select3{
-
-	width: 431px;
-	height: 220px;
-	background: #FFA800;
-	border: 7px solid #000000;
-
-
-}
-
-#mainlogo{
-
-	width: 1373px;
-	height: 709px;
-	background: url(../img/mainimg1.jpg);
-	border: 9px solid #000000;
-
-}
-
-td{
-
-	text-align: center;
-	font-size: 30pt;
-	font-family: 'ONE-Mobile-POP';
-	font-style: ;
-	
-}
-
