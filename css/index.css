@@ -1,51 +1,53 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap')
+	;
 
 @font-face {
-    font-family: 'ONE-Mobile-POP';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'ONE-Mobile-POP';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
+
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-header {
-	background-color: #333;
-	padding: 10px;
 	display: flex;
-	align-items: center; /* 상하 중앙 정렬 */
-	justify-content: space-between; /* 좌우 중앙 정렬 */
-}
-
-h1 {
-	margin: 0;
-	color: white;
-}
-
-nav {
-	display: flex;
+	align-items: center;
 	justify-content: center;
-	align-items: center; /* 상하 중앙 정렬 */
-}
-
-nav ul {
-	list-style: none;
+	height: 100vh; /* 전체 화면 높이에 대한 100% */
 	margin: 0;
-	padding: 0;
+	float: 0;
 }
 
-nav li {
-	margin: 0 15px;
-	display: inline-block;
+#btnsection{
+	display: block;
+	position: relative;
+    top: -350px;
+    left: -1500px;
 }
 
-nav a {
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
+#btn1{
+	display: block;
+	position: relative;
+	width: 400px;
+	height: 60px;
+}
+
+#btn2{
+	display: block;
+	position: relative;
+	margin-top : 20px;
+	width: 400px;
+	height: 60px;
+}
+
+#btn3{
+	display: block;
+	position: relative;
+	margin-top : 20px;
+	width: 400px;
+	height: 60px;
 }
