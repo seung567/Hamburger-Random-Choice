@@ -13,41 +13,27 @@
 	font-style: normal;
 }
 
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh; /* 전체 화면 높이에 대한 100% */
-	margin: 0;
-	float: 0;
+
+#mainTopmenu {
+	height : 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'ONE-Mobile-POP';
+    font-size: 15pt;
+    color:white;
+    background-color: black;
+        padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-#btnsection{
-	display: block;
-	position: relative;
-    top: -350px;
-    left: -1500px;
+#mainTopmenu > div:last-child > div {
+    display: inline-block;
+    margin-left: 10px; /* 각 항목 사이의 간격 조정 */
+    margin-right:10px;
 }
 
-#btn1{
-	display: block;
-	position: relative;
-	width: 400px;
-	height: 60px;
-}
-
-#btn2{
-	display: block;
-	position: relative;
-	margin-top : 20px;
-	width: 400px;
-	height: 60px;
-}
-
-#btn3{
-	display: block;
-	position: relative;
-	margin-top : 20px;
-	width: 400px;
-	height: 60px;
+.logo{
+	margin-left : 10px;
 }
