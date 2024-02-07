@@ -1,22 +1,84 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="UTF-8">
-	<title>햄초</title>
-	<link href="./css/index.css" rel="stylesheet" type="text/css" />
-</head>
+<meta charset="UTF-8" />
+<title>햄초</title>
 
-<body bgcolor='#231F20'>
-	<div>
-		<img src='./img/bg.png'/>
+<link href="./css/index.css" rel="stylesheet" type="text/css" />
+<link href="./css/jquery.bxslider.css" rel="stylesheet" />
+
+<!-- jQuery library (served from Google) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="./js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div id="mainTopmenu">
+				<div class="logo">햄초</div>
+
+				<div class="menubar">
+					<span> 랜덤선택 </span> <span> 테마별햄버거 </span> <span> 매장검색 </span> <span> 햄벅순위 </span>
+				</div>
+
+				<div>
+					<div>로그인</div>
+					<div>회원가입</div>
+					<div>사이트문의</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="mainCenter">
+		<div class="main_center_center">
+			<div class="serachTitleName">궁금한 햄버거 검색 !</div>
+
+			<form class="centered ">
+				<fieldset id="searchTitle">
+					<div id="bodyMainImg">
+						<table>
+							<tr class="serachBar">
+								<td><select id="siteChoice">
+										<option>구글</option>
+										<option>네이버</option>
+										<option>다음</option>
+								</select></td>
+								<td><input class="searchInput" type="text" /></td>
+								<td><input id="serchBtn" class="search-btn" type="button" value="검색" /></td>
+							</tr>
+						</table>
+				</fieldset>
+			</form>
+			<div class="btnBox">
+				<button type="button" class="btn btn-outline-warning">랜덤 선택</button>
+				<button type="button" id='hambugershop' class="btn btn-outline-warning">햄버거 순위</button>
+				<button type="button" class="btn btn-outline-warning">사용방법</button>
+			</div>
+		</div>
 	</div>
-	
-	<div id='btnsection'>
-		<input type='button'id='btn1' value='햄버거'/>
-		<input type='button'id='btn2' value='세트'/>
-		<input type='button'id='btn3' value='사이드'/>	
+<!-- 	
+	   <div id="banner_wrap">
+      <ul id="slide_banner">
+         <li><a href="#"></a></li>
+         <li><a href="#"><img src="img/mainimg_2.jpg" alt="사진2" width=664px height=344px /></a></li>
+         <li><a href="#"><img src="img/mainimg_3.jpg" alt="사진3" width=664px height=344px /></a></li>
+
+      </ul> -->
+			<div id="slide">
+			<div id="slide_banner">
+				<div><img src="img/hamSlide1.png" alt="사진1" width=664px height=344px/></div>
+				<div><img src="img/hamSlide2.png" alt="사진2" width=664px height=344px/></div>
+				<div><img src="img/hamSlide3.png" alt="사진3" width=664px height=344px/></div>
+				<div><img src="img/hamSlide1.jpg" alt="사진4" width=664px height=344px/></div>
+				<div><img src="img/hamSlide2.jpg" alt="사진5" width=664px height=344px/></div>
+				<div><img src="img/hamSlide3.jpg" alt="사진6" width=664px height=344px/></div>
+			</div>
+		</div>
 	</div>
+   <!-- </div> -->
+
 </body>
-	
 </html>
