@@ -17,10 +17,24 @@ $(function() {
 
 	});
 
-	$('#serchBtn').click(siteSearch);
+	$('#serchBtn').click(searchButton);
 	$('.menubar span:eq(2)').click(shopmap);
 	$('.menubar span:eq(0)').click(randomsite);
-	$('#hambugerRandom').click(randomsite)
+	$('#hambugerRandom').click(randomsite);
+	
+	function searchButton(){
+		
+		var searchDate = $('.searchInput').val();
+		
+		if(searchDate == '칼로리'){
+			alert('칼로리 구현 사이트 연결');
+		}else if(searchDate == '매운햄버거'){
+			alert('매운햄버거 구현 사이트 연결');
+		}else{
+			siteSearch();
+		}
+		
+	}
 
 	function siteSearch() {
 		var site = $('#siteChoice').val();

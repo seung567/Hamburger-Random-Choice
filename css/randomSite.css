@@ -1,15 +1,20 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap')
+	;
 
 @font-face {
 	font-family: 'ONE-Mobile-POP';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff')
+		format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
-body {
+#body {
+	margin-top : 8px;
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
@@ -19,42 +24,87 @@ body {
 }
 
 #mainTopmenu {
-    width: auto;
-	height : 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'ONE-Mobile-POP';
-    font-size: 15pt;
-    color : black;
-    text-shadow : 2px 2px 2px 2px black;
- 	background-color: #FFA800;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    border-bottom: 3px solid black;
+	width: 2011.99px;
+	height: 62.5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'ONE-Mobile-POP';
+	font-size: 15pt;
+	color: black;
+	background-color: #FFA800;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	border-bottom: 3px solid black;
 }
 
-#mainTopmenu > div:last-child > div {
-    display: inline-block;
-    margin-left: 10px; /* 각 항목 사이의 간격 조정 */
-    margin-right:40px;
+#mainTopmenu>div:last-child>div {
+	display: inline-block;
+	margin-left: 10px; /* 각 항목 사이의 간격 조정 */
+	margin-right: 40px;
 }
 
-.logo{
-	margin-left : 40px;
-    font-size : 20pt;
+#logo {
+	margin-left: 40px;
+	font-size: 20pt;
 }
 
-.menubar{
-    margin-left: 150px;
+#menubar {
+	margin-left: 150px;
 }
 
-.menubar span {
-    margin-right: 150px;
+#menubar span {
+	margin-right: 150px;
 }
 
-.menubar span:last-child {
-    margin-right: 0;
+#menubar span:last-child {
+	margin-right: 0;
+}
+
+#main {
+	display: block;
+	float : none; 
+	margin-top : 400px;
+	align-items: center;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	
+}
+
+
+#mainTop{
+		display: block;
+	margin-top : 400px;
+	align-items: center;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+#mainContent{
+	
+}
+
+#frameMain{
+	width : 1500px;
+	height: 1000px;
+	background : white;
+}
+
+#mainTop td{
+	width : 500px;
+	height: 100px;
+}
+
+#mainTop button{
+	width : 500px;
+	height: 100px;
+	font-family: 'ONE-Mobile-POP';
+	font-size : 30pt;
+	border: 5px solid black;
 }
