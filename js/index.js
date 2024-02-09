@@ -21,28 +21,28 @@ $(function() {
 	$('.menubar span:eq(2)').click(shopmap);
 	$('.menubar span:eq(0)').click(randomsite);
 	$('#hambugerRandom').click(randomsite);
-	
-	function searchButton(){
-		
+
+	function searchButton() {
+
 		var searchDate = $('.searchInput').val();
-		
-		if(searchDate == '칼로리'){
+
+		if (searchDate == '칼로리') {
 			alert('칼로리 구현 사이트 연결');
-		}else if(searchDate == '매운햄버거'){
+		} else if (searchDate == '매운햄버거') {
 			alert('매운햄버거 구현 사이트 연결');
-		}else{
+		} else {
 			siteSearch();
 		}
-		
+
 	}
 
 	function siteSearch() {
 		var site = $('#siteChoice').val();
 		var searchDate = $('.searchInput').val();
-	
+
 		var siteValue;
 
-		if (site == '구글')  {
+		if (site == '구글') {
 			siteValue = 'https://www.google.com/search?q=' + searchDate;
 		} else if (site == '네이버') {
 			siteValue = 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=' + searchDate;
@@ -53,14 +53,14 @@ $(function() {
 		var winObj = window.open("", '검색', "width=1500px, height=1000px");
 		winObj.location.href = siteValue;
 	}
-	
-	function shopmap(){
+
+	function shopmap() {
 		var winObj = window.open("", '검색', "width=1500px, height=1000px");
 		winObj.location.href = './html/kakaomap.html';
-		
+
 	}
-	
-	function randomsite(){
-				window.location.href = './html/randomSite.html';
+
+	function randomsite() {
+		window.location.href = './html/randomSite.html';
 	}
 });

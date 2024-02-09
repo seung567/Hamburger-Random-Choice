@@ -14,13 +14,14 @@
 }
 
 #body {
-	margin-top : 8px;
+	margin-top: 8px;
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
 	background-image: url('../img/bgImg.jpg');
 	background-size: cover; /* 배경 이미지를 화면에 꽉 채우도록 설정 */
 	background-position: center; /* 배경 이미지를 가운데 정렬합니다 */
+	background-attachment: fixed;
 }
 
 #mainTopmenu {
@@ -64,21 +65,20 @@
 }
 
 #main {
+	display: flex;
+	float: none;
+	margin-top: 400px;
+	align-items: center;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+#mainTop {
 	display: block;
-	float : none; 
-	margin-top : 400px;
-	align-items: center;
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	
-}
-
-
-#mainTop{
-		display: block;
-	margin-top : 400px;
+	float: left;
+	margin-top: 400px;
 	align-items: center;
 	display: table;
 	margin-left: auto;
@@ -86,25 +86,120 @@
 	margin-top: 20px;
 }
 
-#mainContent{
-	
-}
-
-#frameMain{
-	width : 1500px;
+/* #frameMain {
+	width: 1500px;
 	height: 1000px;
-	background : white;
-}
+	background: white;
+} */
 
-#mainTop td{
-	width : 500px;
+/* #mainTop td {
+	width: 500px;
 	height: 100px;
-}
-
-#mainTop button{
-	width : 500px;
+} */
+#mainTop button {
+	width: 500px;
 	height: 100px;
 	font-family: 'ONE-Mobile-POP';
-	font-size : 30pt;
+	font-size: 30pt;
 	border: 5px solid black;
 }
+
+td {
+	width: 150px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: Pretendard;
+}
+
+#cardStart {
+	display: table;
+	width: 500px;
+	height: 50px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'ONE-Mobile-POP';
+	font-size: 30px;
+}
+/* ===========================================================*/
+.cardbg {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-family: Pretendard;
+}
+
+.flip {
+	width: 200px;
+	height: 250px;
+	position: relative;
+	perspective: 1100px;
+	margin: 2rem;
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: .4s;
+	transform-style: preserve-3d;
+}
+
+.front, .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.front {
+	background: tomato;
+}
+
+.back {
+	background: royalblue;
+	transform: rotateY(180deg);
+}
+/* ====================================================== */
+#subMain {
+	float: left;
+	margin-left: 100px;
+	text-align: center;
+}
+
+#randomHambuger {
+	width: 500px;
+	font-size: 40pt;
+	font-family: 'ONE-Mobile-POP';
+	color: white;
+	display: table;
+	display: inline-block; /* inline-block으로 설정 */
+	margin-right: auto;
+	align-items: center;
+}
+
+.randomHamImg {
+	border: 2px solid black;
+	background-color: white;
+}
+
+.hambugerInfo {
+	float: left;
+	font-family: 'ONE-Mobile-POP';
+	font-size: 25pt;
+	margin-top: 50px;
+}
+
+.hambugerInfo li {
+	text-align: left;
+	justify-content: flex-start;
+}
+.hidden{display: hidden;}
