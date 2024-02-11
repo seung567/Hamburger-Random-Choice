@@ -181,7 +181,10 @@ td {
 	background: royalblue;
 	transform: rotateY(180deg);
 	font-size : 10pt;
+	font-weight : 100;
 	text-align : center;
+	padding-left : 8px;
+	padding-right : 8px;
 }
 /* ====================================================== */
 #subMain {
@@ -191,6 +194,7 @@ td {
 }
 
 #randomHambuger {
+	margin-top : 30pt;
 	width: 500px;
 	font-size: 40pt;
 	font-family: 'ONE-Mobile-POP';
@@ -199,10 +203,13 @@ td {
 	display: inline-block; /* inline-block으로 설정 */
 	margin-right: auto;
 	align-items: center;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
 }
 
 .randomHamImg {
-	border: 2px solid black;
+	margin-top : 30pt;
+	border: 4px solid black;
 	background-color: white;
 }
 
@@ -210,11 +217,19 @@ td {
 	float: left;
 	font-family: 'ONE-Mobile-POP';
 	font-size: 25pt;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .hambugerInfo li {
+	margin-top : 10pt;
 	text-align: left;
 	justify-content: flex-start;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+}
+
+.hambugerInfo li:first-child{
+	margin-top : 0pt;
 }
 .hidden{display: hidden;}
