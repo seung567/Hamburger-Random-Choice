@@ -10,20 +10,35 @@ $(function() {
 	$('#logo').click(homepage);
 	$('#cardStart').click(createCard);
 
-	test();
-
 	$(document).on('click', '.flip', function() {
 		$(this).find('.card').css("transform", "rotateY(180deg)");
 
-		var test = $(this).find('.back');
+		var selectCard = $(this).find('.back');
+		var sumMainObj = $('#subMain');
 
 		for (var i in hamburgerList) {
-			if (test.text() == hamburgerList[i].name) {
-				console.log(hamburgerList[i].name);
-				console.log(hamburgerList[i].price);
-				console.log(hamburgerList[i].brand);
-				console.log(hamburgerList[i].img);
-			}
+
+			if (selectCard.text() == hamburgerList[i].name) {
+
+				clear();
+
+				sumMainObj.append("<div id='randomHambuger'>선택된 햄버거 !!</div>");
+				$('#randomHambuger').after("<div class='randomHamImg'></div>");
+
+				if (hamburgerList[i].brand == "롯데리아") {
+					$('.randomHamImg').append("<img width=500px height=375px src='../img/lotte/" + hamburgerList[i].img + "' />")
+				} else if (hamburgerList[i].brand == "맥도날드") {
+					$('.randomHamImg').append("<img width=500px height=375px src='../img/mac/" + hamburgerList[i].img + "' />")
+				}
+
+				sumMainObj.append("<div class='hambugerInfo'></div>");
+				$('.hambugerInfo').append("<ul></ul>");
+				$('.hambugerInfo ul').append("<li>이름 : " + hamburgerList[i].name + "</li>");
+				$('.hambugerInfo ul').append("<li>가격 : " + hamburgerList[i].price + "</li>");
+				$('.hambugerInfo ul').append("<li>칼로리 : " + hamburgerList[i].kal + "</li>");
+				$('.hambugerInfo ul').append("<li>브랜드 : " + hamburgerList[i].brand + "</li>");
+
+			} // end-if
 		}
 	});
 
@@ -33,11 +48,13 @@ $(function() {
 
 	function createCard() {
 
+		clear();
+
 		var hamlist = function() {
 
 			var totalList = totalArry;
 
-			for (var i = 0; i < 20; i++) {
+			for (var i = 0; i < 1000; i++) {
 
 				var c;
 				var rand = Math.floor(Math.random() * totalArry.length);
@@ -63,7 +80,7 @@ $(function() {
 
 		var cardSum = 0;
 
-		for (var i = 0; i < 3; i++) {
+		for (var i = 0; i < 2; i++) {
 			var trDom = document.createElement('tr');
 
 			for (var j = 0; j < 4; j++) {
@@ -107,11 +124,10 @@ $(function() {
 		}
 	}
 
-	//	var h1 = new hamMenu("햄버거1",19000,'2.png','롯데리아');	
-
-	function test() {
-
-		$('.hambugerInfo  ul > li').eq(1).text('가격 : ');
-		$('.randomHamImg img').attr('src', '../img/lotte/' + lotteArry[0].img);
+	function clear() {
+		$('#randomHambuger').remove();
+		$('.randomHamImg').remove();
+		$('.hambugerInfo').remove();
 	}
+
 });
