@@ -8,38 +8,47 @@ $(function() {
 	var hamburgerList;
 
 	$('#logo').click(homepage);
-	$('#cardStart').click(createCard);
+	$('.cardStart').click(createCard);
+	$('#menubar span').click(randomsite);
 
 	$(document).on('click', '.flip', function() {
-		$(this).find('.card').css("transform", "rotateY(180deg)");
+		
+		if ($(".hambugerInfo").val() == null) {
+			
+			$(this).find('.card').css("transform", "rotateY(180deg)");
 
-		var selectCard = $(this).find('.back');
-		var sumMainObj = $('#subMain');
+			var selectCard = $(this).find('.back');
+			var sumMainObj = $('#subMain');
 
-		for (var i in hamburgerList) {
+			for (var i in hamburgerList) {
 
-			if (selectCard.text() == hamburgerList[i].name) {
+				if (selectCard.text() == hamburgerList[i].name) {
 
-				clear();
+					clear();
 
-				sumMainObj.append("<div id='randomHambuger'>선택된 햄버거 !!</div>");
-				$('#randomHambuger').after("<div class='randomHamImg'></div>");
+					sumMainObj.append("<div id='randomHambuger'>선택된 햄버거 !!</div>");
+					$('#randomHambuger').after("<div class='randomHamImg'></div>");
 
-				if (hamburgerList[i].brand == "롯데리아") {
-					$('.randomHamImg').append("<img width=500px height=375px src='../img/lotte/" + hamburgerList[i].img + "' />")
-				} else if (hamburgerList[i].brand == "맥도날드") {
-					$('.randomHamImg').append("<img width=500px height=375px src='../img/mac/" + hamburgerList[i].img + "' />")
-				}
+					if (hamburgerList[i].brand == "롯데리아") {
+						$('.randomHamImg').append("<img width=500px height=375px src='../img/lotte/" + hamburgerList[i].img + "' />");
+					} else if (hamburgerList[i].brand == "맥도날드") {
+						$('.randomHamImg').append("<img width=500px height=375px src='../img/mac/" + hamburgerList[i].img + "' />");
+					}
 
-				sumMainObj.append("<div class='hambugerInfo'></div>");
-				$('.hambugerInfo').append("<ul></ul>");
-				$('.hambugerInfo ul').append("<li>이름 : " + hamburgerList[i].name + "</li>");
-				$('.hambugerInfo ul').append("<li>가격 : " + hamburgerList[i].price + "</li>");
-				$('.hambugerInfo ul').append("<li>칼로리 : " + hamburgerList[i].kal + "</li>");
-				$('.hambugerInfo ul').append("<li>브랜드 : " + hamburgerList[i].brand + "</li>");
+					sumMainObj.append("<div class='hambugerInfo'></div>");
+					$('.hambugerInfo').append("<ul></ul>");
+					$('.hambugerInfo ul').append("<li>이름 : " + hamburgerList[i].name + "</li>");
+					$('.hambugerInfo ul').append("<li>가격 : " + hamburgerList[i].price + "</li>");
+					$('.hambugerInfo ul').append("<li>칼로리 : " + hamburgerList[i].kal + "</li>");
+					$('.hambugerInfo ul').append("<li>브랜드 : " + hamburgerList[i].brand + "</li>");
 
-			} // end-if
+				} // end-if
+			}
+		}else{
+			alert("다시 뽑을려면 뽑기 버튼을 다시 눌러주세요!")
 		}
+
+
 	});
 
 	function homepage() {
@@ -50,27 +59,6 @@ $(function() {
 
 		clear();
 
-		var hamlist = function() {
-
-			var totalList = totalArry;
-
-			for (var i = 0; i < 1000; i++) {
-
-				var c;
-				var rand = Math.floor(Math.random() * totalArry.length);
-				c = totalList[0];
-				totalList[0] = totalList[rand];
-				totalList[rand] = c;
-
-			}
-
-			return totalList;
-		}
-
-		hamburgerList = hamlist();
-
-		var tableObj = document.getElementById('mainContent');
-
 		if ($('tr').length > 0) {
 			var list = $(document).find('tr');
 			for (var i = 0; i < list.length; i++) {
@@ -78,12 +66,60 @@ $(function() {
 			}
 		}
 
+		var btnText = $(this).text().trim();
+
+		hamburgerList = hamlist(btnText);
+
+		var tableObj = document.getElementById('mainContent');
+
+		if (btnText == "전체 랜덤뽑기") {
+			setNode(tableObj, 3, 4, hamburgerList);
+		} else {
+			setNode(tableObj, 2, 4, hamburgerList);
+		}
+
+	}
+
+	function hamlist(selBrand) {
+
+		var totalList;
+
+		if (selBrand == "전체 랜덤뽑기") {
+			totalList = totalArry;
+		} else if (selBrand == "롯데리아 랜덤뽑기") {
+			console.log("롯데리아 선택");
+			totalList = lotteArry;
+		} else if (selBrand == "맥도날드 랜덤뽑기") {
+			totalList = macArry;
+		} else if (selBrand == "KFC 랜덤뽑기") {
+			alert("KFC 자료 준비중");
+			totalList = kfcArry;
+		} else if (selBrand == "버거킹 랜덤뽑기") {
+			alert("버거킹 자료 준비중");
+			totalList = kingArry;
+		}
+
+		for (var i = 0; i < 1000; i++) {
+
+			var c;
+			var rand = Math.floor(Math.random() * totalList.length);
+			c = totalList[0];
+			totalList[0] = totalList[rand];
+			totalList[rand] = c;
+
+		}
+
+		return totalList;
+	}
+
+	function setNode(tableNode, trNum, tdNum, hamListDate) {
+
 		var cardSum = 0;
 
-		for (var i = 0; i < 2; i++) {
+		for (var i = 0; i < trNum; i++) {
 			var trDom = document.createElement('tr');
 
-			for (var j = 0; j < 4; j++) {
+			for (var j = 0; j < tdNum; j++) {
 
 				var tdDom1 = document.createElement('td');
 
@@ -97,7 +133,7 @@ $(function() {
 				var h1Dom2 = document.createElement('h1');
 
 				var txtDom1 = document.createTextNode(cardSum + 1);
-				var txtDom2 = document.createTextNode(hamburgerList[cardSum++].name); //
+				var txtDom2 = document.createTextNode(hamListDate[cardSum++].name); //
 
 				divDom1.className = 'cardbg';
 				divDom2.className = 'flip';
@@ -120,7 +156,7 @@ $(function() {
 				trDom.appendChild(tdDom1);
 
 			}
-			tableObj.appendChild(trDom);
+			tableNode.appendChild(trDom);
 		}
 	}
 
@@ -130,4 +166,21 @@ $(function() {
 		$('.hambugerInfo').remove();
 	}
 
+	function shopmap() {
+		var winObj = window.open("", '검색', "width=1500px, height=1000px");
+		winObj.location.href = '../html/kakaomap.html';
+	}
+
+	function randomsite() {
+		
+		var navText = $(this).text().trim();
+		console.log(navText);
+		if(navText=="랜덤선택"){
+			window.location.href = './randomSite.html';
+		}else if(navText=="테마별햄버거"){
+			window.location.href = './themeHam.html';
+		}else if(navText=="매장검색"){
+			shopmap();
+		}
+	}
 });

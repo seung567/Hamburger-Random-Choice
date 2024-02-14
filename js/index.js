@@ -17,9 +17,9 @@ $(function() {
 
 	});
 
+	$('.logo').click(function(){window.location.href = './index.html';})
+	$('.menubar span').click(randomsite);
 	$('#serchBtn').click(searchButton);
-	$('.menubar span:eq(2)').click(shopmap);
-	$('.menubar span:eq(0)').click(randomsite);
 	$('#hambugerRandom').click(randomsite);
 
 	function searchButton() {
@@ -57,10 +57,18 @@ $(function() {
 	function shopmap() {
 		var winObj = window.open("", '검색', "width=1500px, height=1000px");
 		winObj.location.href = './html/kakaomap.html';
-
 	}
 
 	function randomsite() {
-		window.location.href = './html/randomSite.html';
+		
+		var navText = $(this).text().trim();
+
+		if(navText=="랜덤선택"){
+			window.location.href = './html/randomSite.html';
+		}else if(navText=="테마별햄버거"){
+			window.location.href = './html/themeHam.html';
+		}else if(navText=="매장검색"){
+			shopmap();
+		}
 	}
 });
