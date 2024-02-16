@@ -8,7 +8,7 @@ $(function() {
 	var hamburgerList;
 
 	$('#logo').click(homepage);
-	$('.cardStart').click(createCard);
+	$('.cardStart').click(randomCard);
 	$('#menubar span').click(randomsite);
 
 	$(document).on('click', '.flip', function() {
@@ -33,6 +33,8 @@ $(function() {
 						$('.randomHamImg').append("<img width=500px height=375px src='../img/lotte/" + hamburgerList[i].img + "' />");
 					} else if (hamburgerList[i].brand == "맥도날드") {
 						$('.randomHamImg').append("<img width=500px height=375px src='../img/mac/" + hamburgerList[i].img + "' />");
+					} else if (hamburgerList[i].brand == "버거킹") {
+						$('.randomHamImg').append("<img width=500px height=375px src='../img/king/" + hamburgerList[i].img + "' />");
 					}
 
 					sumMainObj.append("<div class='hambugerInfo'></div>");
@@ -55,7 +57,7 @@ $(function() {
 		window.location.href = '../index.html';
 	}
 
-	function createCard() {
+	function randomCard() {
 
 		clear();
 
@@ -86,17 +88,20 @@ $(function() {
 
 		if (selBrand == "전체 랜덤뽑기") {
 			totalList = totalArry;
+			
 		} else if (selBrand == "롯데리아 랜덤뽑기") {
-			console.log("롯데리아 선택");
 			totalList = lotteArry;
+			
 		} else if (selBrand == "맥도날드 랜덤뽑기") {
 			totalList = macArry;
+			
 		} else if (selBrand == "KFC 랜덤뽑기") {
 			alert("KFC 자료 준비중");
 			totalList = kfcArry;
+			
 		} else if (selBrand == "버거킹 랜덤뽑기") {
-			alert("버거킹 자료 준비중");
 			totalList = kingArry;
+			
 		}
 
 		for (var i = 0; i < 1000; i++) {

@@ -21,6 +21,9 @@ $(function() {
 		}else if(brandName == "브랜드 : 맥도날드"){
 			var winObj = window.open("", '검색', "width=1500px, height=1000px");
 			winObj.location.href = 'https://www.mcdonalds.co.kr/kor/store/main.do';
+		}else if(brandName == "브랜드 : 버거킹"){
+			var winObj = window.open("", '검색', "width=1500px, height=1000px");
+			winObj.location.href = 'https://www.burgerking.co.kr/#/store';
 		}
 	});
 
@@ -32,7 +35,7 @@ $(function() {
 			case 0: newHamburger(lotteArry); break;
 			case 1: newHamburger(macArry); break;
 			case '2': newLotteHam(); break;
-			case '3': newLotteHam(); break;
+			case 3: newHamburger(kingArry); break;
 			case 4: lowKalHam(); break;
 			case 5: hotHam(totalArry); break;
 			case 6: totalHam(); break;
@@ -116,6 +119,8 @@ $(function() {
 			imgTdObj.append("<img width=208px height=176px src='../img/lotte/" + hamlist.img + "' />");
 		} else if (hamlist.brand == '맥도날드') {
 			imgTdObj.append("<img width=208px height=176px src='../img/mac/" + hamlist.img + "' />");
+		} else if (hamlist.brand == '버거킹') {
+			imgTdObj.append("<img width=208px height=176px src='../img/king/" + hamlist.img + "' />");
 		}
 
 		trObj1.append("<td colspan='3'>" + hamlist.name + "</td>");
