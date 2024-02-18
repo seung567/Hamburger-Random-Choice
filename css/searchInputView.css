@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+
+
+
+@import	url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap');
+
+@font-face {
+	font-family: 'ONE-Mobile-POP';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+body{
+    background-color: #111111;
+}
+
+.mainBody{
+
+}
+
+.title{
+    position: absolute;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #111111;
+    color: white;
+    font-family: 'JalnanGothic';
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+    border-bottom: 4px double white;
+}
+
+.content{
+    margin-top: 100px;
+}
+
+.content table{
+    width: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'JalnanGothic';
+    font-size: 20px;
+    /* color: white; */
+    text-align: center;
+    background-color: #ff9100;
+}
+
+.content tr:first-child > td:first-child{
+    background-color: #111111;
+    font-size: 40pt;
+    color: white;
+}
+
+.content td{
+    padding: 5px 5px 5px 5px;
+    width: 100px;
+    border: 3px solid black;
+}
+
+.content tr:nth-child(2){
+    font-size: 10pt;
+    
+}
+
+.content table tr:nth-child(2) td:nth-child(1),td:nth-child(3){
+	background-color: #ff9100;
+}
+
+.content table tr:nth-child(2) td:nth-child(2){
+	background-color: #74c21a;
+}
+
+.hamImg{
+    background-color: white;
+}

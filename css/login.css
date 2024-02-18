@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Single+Day&display=swap');
+
+@font-face {
+	font-family: 'ONE-Mobile-POP';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'JalnanGothic';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'S-CoreDream-3Light';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    background-color: #111111;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.loginMainBody> div:first-child{
+    text-align: center;
+    font-family: 'JalnanGothic';
+    font-size: 20pt;
+    color:white;
+    margin-top: 20px;
+}
+
+
+.inputMain{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.inputMain > div:last-child{
+    margin-left: 20px;
+}
+
+.loginInput{
+    height: 25px;
+    margin-top: 10px;
+}
+
+
+
+.loginTitle div{
+    font-family: 'JalnanGothic';
+    font-size: 15pt;
+    height: 25px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.loginTitle div:first-child{
+    margin-top: 15px;
+}
+
+.loginTitle div:last-child{
+    margin-top: 15px;
+}
+
+.loginbtn{
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    font-family: 'JalnanGothic';
+    font-size: 15pt;
+    background-color : white;
+    border: 4px solid black;
+
+}

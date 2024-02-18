@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>햄초</title>
+	<title>햄버거 랜덤 뽑기!</title>
 
 	<link href="./css/index.css" rel="stylesheet" type="text/css" />
 	<link href="./css/jquery.bxslider.css" rel="stylesheet" />
@@ -20,48 +20,44 @@
 	<header>
 		<nav>
 			<div id="mainTopmenu">
-				<div class="logo">햄초</div>
+				<div class="logo">Random Hamburgers</div>
 
 				<div class="menubar">
-					<span> 랜덤선택 </span> <span> 테마별햄버거 </span> <span> 햄벅순위 </span>
+					<span> 랜덤선택 </span>
+					<span> 테마별햄버거 </span>
+					<span> 햄벅순위 </span>
+					<span> 매장찾기 </span>
 				</div>
 
-				<div>
-					<div>로그인</div>
-					<div>회원가입</div>
-					<div>사이트문의</div>
+				<div class="customer">
+					<div id="loginIdTitle">로그인</div>
 				</div>
 			</div>
 		</nav>
 	</header>
 
 	<div class="mainCenter">
-		<div class="main_center_center">
 			<div class="serachTitleName">궁금한 햄버거 검색 !</div>
-			<div>
-				<form class="centered ">
-					<fieldset id="searchTitle">
-						<div id="bodyMainImg">
-							<table>
-								<tr class="serachBar">
-									<td><select id="siteChoice">
-											<option>구글</option>
-											<option>네이버</option>
-											<option>다음</option>
-										</select></td>
-									<td><input class="searchInput" type="text" /></td>
-									<td><input id="serchBtn" class="search-btn" type="button" value="검색" /></td>
-								</tr>
-							</table>
-					</fieldset>
-				</form>
+			<div class="mainSearchContent">
+				<div>
+					<select id="siteChoice" class="siteChoice">
+						<option>구글</option>
+						<option>네이버</option>
+						<option>다음</option>
+					</select>
+				</div>
+				<div>
+					<input id="searchInput" class="searchInput" type="text" />
+					<div class="tipText">※ 칼로리 , 매운햄버거 키워드로 검색 해보세요!</div>
+				</div>
+				<div>
+					<input id="serchBtn" class="search-btn" type="button" value="검색" />
+				</div>
 			</div>
 			<div class="btnBox">
-				<button type="button" id='hambugerRandom' class="btn btn-outline-warning">랜덤 선택</button>
-				<button type="button" id='hambugershop' class="btn btn-outline-warning">햄버거 순위</button>
-				<button type="button" class="btn btn-outline-warning">사용방법</button>
+				<input type="button" id='hambugerRandom' class="btn btn-outline-warning" value="랜덤 선택" />
+				<input type="button" id='hambugershop' class="btn btn-outline-warning" value="테마별 햄버거" />
 			</div>
-		</div>
 	</div>
 
 	<div id="slide">

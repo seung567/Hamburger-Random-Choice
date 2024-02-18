@@ -7,9 +7,10 @@ $(function() {
 
 	var hamburgerList;
 
-	$('#logo').click(homepage);
+	$('.logo').click(homepage);
 	$('.cardStart').click(randomCard);
-	$('#menubar span').click(randomsite);
+	$('.menubar span').click(randomsite);
+	$('.customer div').click(customerConnect);
 
 	$(document).on('click', '.flip', function() {
 		
@@ -43,6 +44,10 @@ $(function() {
 					$('.hambugerInfo ul').append("<li>가격 : " + hamburgerList[i].price + "</li>");
 					$('.hambugerInfo ul').append("<li>칼로리 : " + hamburgerList[i].kal + "</li>");
 					$('.hambugerInfo ul').append("<li>브랜드 : " + hamburgerList[i].brand + "</li>");
+
+					$('#subMain').css({
+						'box-shadow' : '0px 0px 20px 10px #111111'
+					})
 
 				} // end-if
 			}
@@ -169,6 +174,9 @@ $(function() {
 		$('#randomHambuger').remove();
 		$('.randomHamImg').remove();
 		$('.hambugerInfo').remove();
+		$('#subMain').css({
+			'box-shadow' : '0px 0px 0px 0px #111111'
+		})
 	}
 
 	function shopmap() {
@@ -179,13 +187,27 @@ $(function() {
 	function randomsite() {
 		
 		var navText = $(this).text().trim();
-		console.log(navText);
+
 		if(navText=="랜덤선택"){
-			window.location.href = './randomSite.html';
+			window.location.href = '../html/randomSite.html';
 		}else if(navText=="테마별햄버거"){
-			window.location.href = './themeHam.html';
+			window.location.href = '../html/themeHam.html';
 		}else if(navText=="매장검색"){
 			shopmap();
+		}else if(navText=="햄벅순위"){
+			var winObj = window.open("", '랭킹', "width=800, height=1000px");
+			winObj.location.href = '../html/rank.html';
+		}
+	}
+
+	function customerConnect() {
+		
+		var navText = $(this).text().trim();
+
+		if(navText=="로그인"){
+			var winObj = window.open("../html/login.html", '로그인', 'width=375, height=240, status=no,toolbar=no,scrollbars=no');
+			// winObj.location.href = './html/login.html';
+
 		}
 	}
 });
