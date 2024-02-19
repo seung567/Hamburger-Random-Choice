@@ -21,15 +21,44 @@ $(function() {
 	$('.menubar span').click(randomsite);
 	$('#serchBtn').click(searchButton);
 	$('#hambugerRandom').click(randomsite);
+	$('.customer div').click(customerConnect);
+	
+	$('#hambugerRandom').click(function(){
+		window.location.href = './html/randomSite.html';
+	});
+	
+	$('#hambugershop').click(function(){
+		window.location.href = './html/themeHam.html';
+	});
+
+	$(".btnBox input").hover(function(){
+
+		$(this).css({
+			'color' : '#ffffff',
+			'background-color':'#ff9100'
+		})
+
+	});
+
+	$(".btnBox input").mouseleave(function(){
+
+		$(this).css({
+			'color' : '#ff9100',
+			'background-color':'transparent'
+		})
+
+	});
 
 	function searchButton() {
 
 		var searchDate = $('.searchInput').val();
 
 		if (searchDate == '칼로리') {
-			alert('칼로리 구현 사이트 연결');
+			var winObj = window.open("", '랭킹', "width=800, height=1000px");
+			winObj.location.href = './html/searchInputView.html';
 		} else if (searchDate == '매운햄버거') {
-			alert('매운햄버거 구현 사이트 연결');
+			var winObj = window.open("", '랭킹', "width=800, height=1000px");
+			winObj.location.href = './html/searchInputView.html';
 		} else {
 			siteSearch();
 		}
@@ -69,6 +98,25 @@ $(function() {
 			window.location.href = './html/themeHam.html';
 		}else if(navText=="매장검색"){
 			shopmap();
+		}else if(navText=="햄벅순위"){
+			var winObj = window.open("", '랭킹', "width=800px, height=1000px");
+			winObj.location.href = './html/rank.html';
+		}else if(navText=="매장찾기"){
+			var winObj = window.open("", '근처 햄버거 매장 찾기', "width=1120px, height=750px");
+			winObj.location.href = './html/kakaomap.html';
+		}
+	}
+
+	function customerConnect() {
+		
+		var navText = $(this).text().trim();
+
+		if(navText=="로그인"){
+			var winObj = window.open("./html/login.html", '로그인', 'width=375, height=240, status=no,toolbar=no,scrollbars=no');
+			// winObj.location.href = './html/login.html';
+
+		}else if(navText=="회원가입"){
+			window.location.href = './html/themeHam.html';
 		}
 	}
 });

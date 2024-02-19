@@ -8,8 +8,9 @@ $(function() {
 
 
 	$('.logo').click(function() { window.location.href = '../index.html'; })
-	$('#menubar span').click(randomsite);
+	$('.menubar span').click(randomsite);
 	$('.topMainSearch button').click(selbtn);
+	$('.customer div').click(customerConnect);
 
 	$(document).on('click', '.order', function() {
 
@@ -34,11 +35,10 @@ $(function() {
 		switch (sel) {
 			case 0: newHamburger(lotteArry); break;
 			case 1: newHamburger(macArry); break;
-			case '2': newLotteHam(); break;
-			case 3: newHamburger(kingArry); break;
-			case 4: lowKalHam(); break;
-			case 5: hotHam(totalArry); break;
-			case 6: totalHam(); break;
+			case 2: newHamburger(kingArry); break;
+			case 3: lowKalHam(); break;
+			case 4: hotHam(totalArry); break;
+			case 5: totalHam(); break;
 
 		}
 	}
@@ -138,15 +138,29 @@ $(function() {
 	}
 
 	function randomsite() {
-
+		
 		var navText = $(this).text().trim();
 
-		if (navText == "랜덤선택") {
-			window.location.href = './randomSite.html';
-		} else if (navText == "테마별햄버거") {
-			window.location.href = './themeHam.html';
-		} else if (navText == "매장검색") {
+		if(navText=="랜덤선택"){
+			window.location.href = '../html/randomSite.html';
+		}else if(navText=="테마별햄버거"){
+			window.location.href = '../html/themeHam.html';
+		}else if(navText=="매장검색"){
 			shopmap();
+		}else if(navText=="햄벅순위"){
+			var winObj = window.open("", '랭킹', "width=800, height=1000px");
+			winObj.location.href = '../html/rank.html';
+		}
+	}
+
+	function customerConnect() {
+		
+		var navText = $(this).text().trim();
+
+		if(navText=="로그인"){
+			var winObj = window.open("../html/login.html", '로그인', 'width=375, height=240, status=no,toolbar=no,scrollbars=no');
+			// winObj.location.href = './html/login.html';
+
 		}
 	}
 });
