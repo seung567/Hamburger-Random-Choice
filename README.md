@@ -4,5 +4,4 @@
 1.	개발 언어 : HTML, CSS, JavaScript, jQuery
 2.	개발 기간 : 2024.01.29 ~ 2024.02.16
 
-![Uploading image.png…]()
 
