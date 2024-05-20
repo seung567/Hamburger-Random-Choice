@@ -2,5 +2,5 @@
 
 1. 개발 언어 : HTML, CSS, JavaScript, jQuery
 2. 개발 기간 : 2024.01.29 ~ 2024.02.16
-3. URL : <a href="seung567.dothome.co.kr"> seung567.dothome.co.kr </a>
+3. URL : <a href="[seung567.dothome.co.kr](http://seung567.dothome.co.kr/index.html)"> seung567.dothome.co.kr </a>
 
